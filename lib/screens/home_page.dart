@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:language_learning_app/screens/colors_page.dart';
+import 'package:language_learning_app/screens/family_members_page.dart';
+import 'package:language_learning_app/screens/phrases_page.dart';
 import '../components/category_item.dart';
 import 'numbers_page.dart';
 
@@ -8,9 +11,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffFEF6DB),
+      backgroundColor: const Color.fromARGB(255, 240, 235, 235),
       appBar: AppBar(
-        backgroundColor: Colors.brown[700],
+        backgroundColor: Colors.brown[900],
         title: const Text('Toku', style: TextStyle(color: Colors.white)),
       ),
       body: Column(
@@ -23,22 +26,43 @@ class HomePage extends StatelessWidget {
               }));
             },
             text: 'Numbers',
-            color: Colors.orange,
+            color: const Color(0xff6F4E37),
           ),
           Category(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (BuildContext context) {
+                  return const FamilyMembersPage();
+                }),
+              );
+            },
             text: 'Family Members',
-            color: Colors.green[700],
+            color: const Color(0xffA67B5B),
           ),
           Category(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (BuildContext context) {
+                  return const ColorsPage();
+                }),
+              );
+            },
             text: 'Colors',
-            color: Colors.purple[600],
+            color: const Color(0xffECB176),
           ),
           Category(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (BuildContext context) {
+                  return const PhrasesPage();
+                }),
+              );
+            },
             text: 'Phrases',
-            color: Colors.blue[400],
+            color: const Color(0xff803D3B),
           ),
         ],
       ),

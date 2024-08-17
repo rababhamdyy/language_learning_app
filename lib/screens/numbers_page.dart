@@ -10,7 +10,7 @@ class NumbersPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.white),
-        backgroundColor: Colors.brown[700],
+        backgroundColor: Colors.brown[900],
         title: const Text(
           'Numbers',
           style: TextStyle(color: Colors.white),

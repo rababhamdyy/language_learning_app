@@ -14,13 +14,13 @@ class Category extends StatelessWidget {
       child: Container(
         alignment: Alignment.centerLeft,
         padding: const EdgeInsets.only(left: 24),
-        height: 70,
+        height: 80,
         width: double.infinity,
         color: color,
         child: Text(
           text!,
           style: const TextStyle(
-              color: Colors.white, fontSize: 20, fontWeight: FontWeight.w400),
+              color: Colors.white, fontSize: 23, fontWeight: FontWeight.w400),
         ),
       ),
     );

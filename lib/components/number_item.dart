@@ -9,11 +9,11 @@ class Numbers extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      color: Colors.orange,
+      color: const Color(0xff6F4E37),
       child: Row(
         children: [
           Container(
-            color: const Color(0xffFFF6DC),
+            color: const Color.fromARGB(255, 240, 235, 235),
             child: Image.asset(number.image),
           ),
           Padding(
@@ -33,12 +33,15 @@ class Numbers extends StatelessWidget {
             ),
           ),
           const Spacer(flex: 1),
-          const Padding(
-            padding: EdgeInsets.only(right: 8),
-            child: Icon(
-              Icons.arrow_right,
-              size: 50,
-              color: Colors.white,
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.play_arrow,
+                size: 28,
+                color: Colors.white,
+              ),
             ),
           )
         ],
