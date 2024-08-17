@@ -3,14 +3,14 @@ import 'package:language_learning_app/models/item_model.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 class Numbers extends StatelessWidget {
-  const Numbers({super.key, required this.number});
+  const Numbers({super.key, required this.number,required this.color});
   final ItemModel number;
-
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      color: const Color(0xff6F4E37),
+      color: color,
       child: Row(
         children: [
           Container(

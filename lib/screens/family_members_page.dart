@@ -19,7 +19,10 @@ class FamilyMembersPage extends StatelessWidget {
       body: ListView.builder(
           itemCount: familymembers.length,
           itemBuilder: (context, familyIndex) {
-            return FamilyMembers(familyMember: familymembers[familyIndex]);
+            return FamilyMembers(
+              familyMember: familymembers[familyIndex],
+              color: const Color(0xffA67B5B),
+            );
           }),
     );
   }

@@ -4,21 +4,20 @@ import 'package:language_learning_app/models/item_model.dart';
 
 class FamilyMembers extends StatelessWidget {
   const FamilyMembers(
-      {super.key,
-      required this.familyMember});
+      {super.key, required this.familyMember, required this.color});
 
   final ItemModel familyMember;
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      color: const Color(0xffA67B5B),
+      color: color,
       child: Row(
         children: [
           Container(
             color: const Color.fromARGB(255, 240, 235, 235),
-            child:
-                Image.asset(familyMember.image),
+            child: Image.asset(familyMember.image),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20),

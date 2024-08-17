@@ -17,10 +17,13 @@ class ColorsPage extends StatelessWidget {
         ),
       ),
       body: ListView.builder(
-        itemCount: colors.length,
-        itemBuilder: (context, colorIndex) {
-        return ColorItem(color: colors[colorIndex]);
-      }),
+          itemCount: colors.length,
+          itemBuilder: (context, colorIndex) {
+            return ColorItem(
+              color: colors[colorIndex],
+              colorContainer: const Color.fromARGB(255, 225, 151, 77),
+            );
+          }),
     );
   }
 }
