@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:language_learning_app/components/color_item.dart';
+import 'package:language_learning_app/models/color_list.dart';
 
 class ColorsPage extends StatelessWidget {
   const ColorsPage({super.key});
@@ -14,6 +16,11 @@ class ColorsPage extends StatelessWidget {
           style: TextStyle(color: Colors.white),
         ),
       ),
+      body: ListView.builder(
+        itemCount: colors.length,
+        itemBuilder: (context, colorIndex) {
+        return ColorItem(color: colors[colorIndex]);
+      }),
     );
   }
 }

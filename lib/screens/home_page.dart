@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
               );
             },
             text: 'Colors',
-            color: const Color(0xffECB176),
+            color: const Color.fromARGB(255, 225, 151, 77),
           ),
           Category(
             onTap: () {

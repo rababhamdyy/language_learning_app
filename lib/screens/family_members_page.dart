@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:language_learning_app/components/family_member_item';
-import 'package:language_learning_app/models/family_member.dart';
+import 'package:language_learning_app/components/family_member_item.dart';
+import 'package:language_learning_app/models/family_list.dart';
 
 class FamilyMembersPage extends StatelessWidget {
   const FamilyMembersPage({super.key});
