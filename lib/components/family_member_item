@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:language_learning_app/models/number.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:language_learning_app/models/family_member.dart';
 
-class Numbers extends StatelessWidget {
-  const Numbers({super.key, required this.number});
-  final Number number;
+class FamilyMembers extends StatelessWidget {
+  const FamilyMembers(
+      {super.key,
+      required this.familyMember});
 
+  final FamilyMember familyMember;
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      color: const Color(0xff6F4E37),
+      color: const Color(0xffA67B5B),
       child: Row(
         children: [
           Container(
             color: const Color.fromARGB(255, 240, 235, 235),
-            child: Image.asset(number.image),
+            child:
+                Image.asset(familyMember.image),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20),
@@ -24,23 +27,25 @@ class Numbers extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  number.jpName,
-                  style: const TextStyle(color: Colors.white, fontSize: 24),
+                  familyMember.jpName,
+                  style: const TextStyle(color: Colors.white, fontSize: 22),
                 ),
                 Text(
-                  number.enName,
-                  style: const TextStyle(color: Colors.white, fontSize: 20),
-                ),
+                  familyMember.enName,
+                  style: const TextStyle(color: Colors.white, fontSize: 18),
+                )
               ],
             ),
           ),
-          const Spacer(flex: 1),
+          const Spacer(
+            flex: 1,
+          ),
           Padding(
             padding: const EdgeInsets.only(right: 10),
             child: IconButton(
               onPressed: () {
                 final player = AudioPlayer();
-                player.play(AssetSource(number.sound));
+                player.play(AssetSource(familyMember.sound));
               },
               icon: const Icon(
                 Icons.play_arrow,

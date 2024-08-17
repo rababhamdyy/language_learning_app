@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:language_learning_app/components/family_member_item';
+import 'package:language_learning_app/models/family_member.dart';
 
 class FamilyMembersPage extends StatelessWidget {
   const FamilyMembersPage({super.key});
@@ -14,6 +16,11 @@ class FamilyMembersPage extends StatelessWidget {
           style: TextStyle(color: Colors.white),
         ),
       ),
+      body: ListView.builder(
+          itemCount: familymembers.length,
+          itemBuilder: (context, familyIndex) {
+            return FamilyMembers(familyMember: familymembers[familyIndex]);
+          }),
     );
   }
 }
