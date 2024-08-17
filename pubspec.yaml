@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  audioplayers: ^4.1.0
   flutter:
     sdk: flutter
 
@@ -63,6 +64,10 @@ flutter:
     - assets/images/numbers/
     - assets/images/family_members/
     - assets/images/colors/
+    - assets/sounds/numbers/
+    - assets/sounds/family_members/
+    - assets/sounds/colors/
+    - assets/sounds/phrases/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
